@@ -1,0 +1,40 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roboUI", "WpfApp1\roboUI.csproj", "{CC4CE3B7-CDA3-45EF-8C66-71D8F63CC961}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roboUI.Core", "roboUI.Core\roboUI.Core.csproj", "{B01633DA-360D-4AFD-95C1-083C114BA3E0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roboUI.Data", "roboUI.Data\roboUI.Data.csproj", "{A0CB98A3-D39E-416F-AD66-9D1873710A67}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "roboUI.Services", "roboUI.Services\roboUI.Services.csproj", "{D87A67D9-D711-44D8-9D25-2FAABCC76A58}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{CC4CE3B7-CDA3-45EF-8C66-71D8F63CC961}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{CC4CE3B7-CDA3-45EF-8C66-71D8F63CC961}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{CC4CE3B7-CDA3-45EF-8C66-71D8F63CC961}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{CC4CE3B7-CDA3-45EF-8C66-71D8F63CC961}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B01633DA-360D-4AFD-95C1-083C114BA3E0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B01633DA-360D-4AFD-95C1-083C114BA3E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B01633DA-360D-4AFD-95C1-083C114BA3E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B01633DA-360D-4AFD-95C1-083C114BA3E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0CB98A3-D39E-416F-AD66-9D1873710A67}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0CB98A3-D39E-416F-AD66-9D1873710A67}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0CB98A3-D39E-416F-AD66-9D1873710A67}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0CB98A3-D39E-416F-AD66-9D1873710A67}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D87A67D9-D711-44D8-9D25-2FAABCC76A58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D87A67D9-D711-44D8-9D25-2FAABCC76A58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D87A67D9-D711-44D8-9D25-2FAABCC76A58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D87A67D9-D711-44D8-9D25-2FAABCC76A58}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

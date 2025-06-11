@@ -21,7 +21,7 @@ namespace roboUI.Core.Models
         public OptionSelectionType SelectionType { get; set; } = OptionSelectionType.Single;
 
         //bu gruptan bir seçim yapmak zorunlu mu?
-        public bool IsRequiredForProduct { get; set; } = false;
+        public bool IsRequired { get; set; } = false;
 
         public int DisplayOrder { get; set; } //UI'da gösterim sırası
 

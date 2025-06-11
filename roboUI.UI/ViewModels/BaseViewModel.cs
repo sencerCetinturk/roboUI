@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
+using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -40,6 +41,15 @@ namespace roboUI.ViewModels
             storage = value;
             OnPropertyChanged(propertyName);
             return true;
+        }
+
+        protected virtual bool SetProperty<T>(ref T storage, T value, Action onChanged, [CallerMemberName]string? propertyName = null)
+        {
+            if(Equals(storage, value)) return false;
+            storage = value;
+            onChanged?.Invoke(); // Ek eylemi çağırır.
+            OnPropertyChanged(propertyName);
+             return true;
         }
     }
 }

@@ -3,12 +3,14 @@ using System.Data;
 using System.Windows;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
+using roboUI;
 using roboUI.Core.Interfaces;
 using roboUI.Data;
 using roboUI.Services;
+using roboUI.UI.ViewModels.Admin;
 using roboUI.ViewModels;
 
-namespace WpfApp1
+namespace roboUI.UI
 {
     /// <summary>
     /// Interaction logic for App.xaml
@@ -57,12 +59,16 @@ namespace WpfApp1
             // Servisler genellikle Scoped veya Transient olarak kaydedilir. State tutmayan basit servisler için Transient uygundur.
             services.AddTransient<ICoffeeProductService, CoffeeProductService>();
             services.AddTransient<IOrderService, OrderService>();
+            services.AddTransient<IOptionGroupService, OptionGroupService>();
+            services.AddTransient<IOptionChoiceService, OptionChoiceService>();
+            services.AddTransient<OptionGroupManagementViewModel>();
             // Diğer servisler eklendikçe buraya eklenecek...
 
 
             // 3. ViewModel'leri Kaydetme
             // ViewModel'ler genellikle Transient olarak kaydedilir, çünkü her view için yeni bir instance gerekebilir.
             services.AddTransient<MainViewModel>(); // Bu ViewModel'i bir sonraki adımda oluşturacağız
+            services.AddTransient<OptionGroupManagementViewModel>();
             // Diğer ViewModel'ler eklendikçe buraya eklenecek...
 
 

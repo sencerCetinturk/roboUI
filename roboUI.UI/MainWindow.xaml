@@ -8,7 +8,7 @@
     mc:Ignorable="d"
         Title="Kahve Sipariş Sistemi" Height="768" Width="1024"
         WindowStyle="None" ResizeMode="NoResize" WindowState="Maximized"
-        Background="#FF2D2D30">
+        Background="#FF2D2D30" PreviewKeyDown="Window_PreviewKeyDown">
 
     <!-- DataContext'i XAML'de atamak için (App.xaml.cs'de yapıyorsak bu kısım gerekmeyebilir): -->
     <!-- <Window.DataContext> -->

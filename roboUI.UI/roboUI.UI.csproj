@@ -17,6 +17,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\roboUI.Core\roboUI.Core.csproj" />
     <ProjectReference Include="..\roboUI.Data\roboUI.Data.csproj" />
     <ProjectReference Include="..\roboUI.Services\roboUI.Services.csproj" />
   </ItemGroup>

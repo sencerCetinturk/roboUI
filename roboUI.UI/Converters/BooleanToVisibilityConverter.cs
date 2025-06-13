@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Data;
 
-namespace roboUI.Converters
+namespace roboUI.UI.Converters
 {
     public class BooleanToVisibilityConverter:IValueConverter
     {

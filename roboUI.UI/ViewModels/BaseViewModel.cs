@@ -7,7 +7,7 @@ using System.Security.Cryptography.Xml;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace roboUI.ViewModels
+namespace roboUI.UI.ViewModels
 {
     public abstract class BaseViewModel :INotifyPropertyChanged
     {

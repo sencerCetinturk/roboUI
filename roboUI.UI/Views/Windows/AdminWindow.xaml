@@ -4,11 +4,79 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:roboUI.UI.Views.Windows"
+        xmlns:vmAdmin="clr-namespace:roboUI.UI.ViewModels.Admin"
         mc:Ignorable="d"
          Title="Yönetim Paneli" Height="700" Width="900"
-        WindowStartupLocation="CenterScreen" Background="#FF252526">
+        WindowStartupLocation="CenterScreen" Background="#FF252526"
+        WindowStyle="None" ResizeMode="NoResize" WindowState="Maximized">
     <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="220"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        
+        <!-- Sol Yönetim Menüsü -->
+        <Border Grid.Column="0" Background="#FF1E1E1E" Padding="5">
+            <StackPanel>
+                <TextBlock Text="YÖNETİM PANELİ" Foreground="White" FontSize="20" FontWeight="Bold"
+                           TextAlignment="Center" Margin="10,15,10,20"/>
+
+                <ListBox ItemsSource="{Binding AdminMenuItems}"
+                         SelectedItem="{Binding SelectedAdminMenuItem, Mode=TwoWay}"
+                         Background="Transparent" BorderThickness="0"
+                         ScrollViewer.HorizontalScrollBarVisibility="Disabled">
+                    <ListBox.ItemContainerStyle>
+                        <Style TargetType="ListBoxItem">
+                            <Setter Property="Padding" Value="10,8"/>
+                            <Setter Property="Margin" Value="0,2"/>
+                            <Setter Property="Background" Value="Transparent"/>
+                            <Setter Property="BorderThickness" Value="0"/>
+                            <Setter Property="Foreground" Value="LightGray"/>
+                            <Setter Property="Template">
+                                <Setter.Value>
+                                    <ControlTemplate TargetType="ListBoxItem">
+                                        <Border Name="Bd"
+                                                Background="{TemplateBinding Background}"
+                                                Padding="{TemplateBinding Padding}"
+                                                SnapsToDevicePixels="True">
+                                            <ContentPresenter HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                                              VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                                              SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"/>
+                                        </Border>
+                                        <ControlTemplate.Triggers>
+                                            <Trigger Property="IsSelected" Value="True">
+                                                <Setter TargetName="Bd" Property="Background" Value="#FF007ACC"/>
+                                                <Setter Property="Foreground" Value="white"/>
+                                            </Trigger>
+                                            <Trigger Property="IsMouseOver" Value="True">
+                                                <Setter TargetName="Bd" Property="Background" Value="#FF3E3E42"/>
+                                            </Trigger>
+                                        </ControlTemplate.Triggers>
+                                    </ControlTemplate>
+                                </Setter.Value>
+                            </Setter>
+                        </Style>
+                    </ListBox.ItemContainerStyle>
+                    <ListBox.ItemTemplate>
+                        <DataTemplate DataType="{x:Type vmAdmin:AdminMenuItemViewModel}">
+                            <StackPanel Orientation="Horizontal" > 
+                                <!-- <Image Source="{Binding IconPath}" Width="20" Height="20" Margin="0,0,8,0" VerticalAlignment="Center"/> -->
+                                <TextBlock Text="{Binding Title}" VerticalAlignment="Center" FontSize="15"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                </ListBox>
+
+                <Button Content="Ana Ekrana Dön" Margin="10,15,10,20"
+                        Background="#555" Foreground="White" Padding="10,8" Click="CloseAdminPanel_Click"/>
+
+            </StackPanel>
+        </Border> 
+        
+        
+        
+        
         <!-- İleride buraya bir yan menü veya TabControl eklenebilir -->
-        <Frame x:Name="AdminContentFrame" NavigationUIVisibility="Hidden"/>
+        <Frame Grid.Column="1" x:Name="AdminContentFrame" NavigationUIVisibility="Hidden" Margin="10" Background="#FF2D2D30"/>
     </Grid>
 </Window>

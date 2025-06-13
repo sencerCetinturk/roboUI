@@ -5,9 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using roboUI.Core.Interfaces;
 
-namespace roboUI.ViewModels
+namespace roboUI.UI.ViewModels
 {
-    public class MainViewModel:BaseViewModel
+    public class MainViewModel : BaseViewModel
     {
         private readonly ICoffeeProductService _coffeeProductService;
         private string _welcomeMessage;

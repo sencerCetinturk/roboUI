@@ -31,13 +31,13 @@ namespace roboUI
             {
                 // AdminWindow'u aç (DI container'dan alarak veya direkt new ile)
                 // Eğer AdminWindow'u da DI'a kaydettiyseniz:
-                //var adminWindow = App.ServiceProvider.GetService<AdminWindow>();
+                var adminWindow = App.ServiceProvider.GetService<AdminWindow>();
                 //adminWindow?.Show();
 
                 // Veya direkt oluşturup gösterin (DI'a kaydetmediyseniz):
-                AdminWindow adminWin = new AdminWindow(); // AdminWindow.xaml.cs içinde gerekli ViewModel'i DataContext'e atayın
-                adminWin.Owner = this; // İsteğe bağlı
-                adminWin.Show();
+                //AdminWindow adminWin = new AdminWindow(); // AdminWindow.xaml.cs içinde gerekli ViewModel'i DataContext'e atayın
+                adminWindow.Owner = this; // İsteğe bağlı
+                adminWindow.ShowDialog();
 
                 e.Handled = true;
             }

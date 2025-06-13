@@ -11,7 +11,7 @@ using roboUI.Core.Enums;
 using roboUI.Core.Interfaces;
 using roboUI.Core.Models;
 using roboUI.UI.Commands;
-using roboUI.ViewModels;
+using roboUI.UI.ViewModels;
 
 namespace roboUI.UI.ViewModels.Admin
 {
